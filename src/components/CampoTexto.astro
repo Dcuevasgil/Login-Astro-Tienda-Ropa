@@ -1,0 +1,11 @@
+---
+interface Props {
+    visualizacion: string;
+    clase: string;
+    type: "text" | "password";
+}
+
+const { visualizacion, clase } = Astro.props
+---
+
+<input type="text" placeholder={visualizacion} class={clase}>

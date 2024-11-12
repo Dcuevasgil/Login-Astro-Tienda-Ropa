@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Boton from '../components/Boton.astro';
+import CampoTexto from '../components/CampoTexto.astro';
+---
+<Layout>
+	<div class="flex items-center justify-center min-h-screen bg-gray-100">
+		<!-- Contenedor del Formulario: Ocupa la mitad izquierda de la pantalla -->
+		<div class="w-1/2 flex flex-col items-center p-8">
+			<img src="../img/logo_marca.png" alt="Logo" class="mb-6 w-24">
+			<h2 class="text-2xl font-semibold mb-6">Welcome Back</h2>
+			
+			<CampoTexto type="text" visualizacion="User" clase="w-3/4 p-3 mb-4 border border-gray-300 rounded-md" />
+			<CampoTexto type="password" visualizacion="Password" clase="w-3/4 p-3 mb-4 border border-gray-300 rounded-md" />
+	  
+			<Boton visualizacion="Log in" clase="w-3/4 bg-green-700 text-white py-2 rounded-md" type="submit" />
+	  
+			<Boton
+			  visualizacion="Login with Google"
+			  clase="w-3/4 bg-gray-300 text-gray-700 py-2 rounded-md flex items-center justify-center mt-4"
+			  type="button"
+			  image="../img/logo_google.png"
+			/>
+		</div>
+	  
+		<!-- Imagen a la derecha: Ocupa la mitad derecha de la pantalla -->
+		<div class="w-1/2 h-full">
+			<img src="../img/img_login.png" alt="Imagen de Login" class="w-full h-full object-cover">
+		</div>
+	</div>
+</Layout>

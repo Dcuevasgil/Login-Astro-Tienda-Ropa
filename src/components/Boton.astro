@@ -1,0 +1,15 @@
+---
+interface Props {
+  visualizacion: string;
+  clase: string;
+  type: "button" | "submit" | "reset";
+  image?: string; // Imagen opcional
+}
+
+const { visualizacion, clase, type, image } = Astro.props;
+---
+
+<button type={type} class={clase}>
+  {image && <img src={image} alt="icono" class="inline-block w-5 h-5 mr-2" />}
+  {visualizacion}
+</button>
